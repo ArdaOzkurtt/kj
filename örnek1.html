@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        p,
+        h3,
+        h5 {
+            margin: 0 !important;
+        }
+
+        .events-wrapper {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wasd {
+            width: 100%;
+            height: auto;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .asd {
+            width: 100%;
+            height: auto;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .a {
+            color: red;
+            display: none;
+        }
+
+        .b {
+            color: blue;
+            display: none;
+        }
+
+        .abc {
+            display: block;
+        }
+
+        #myDiv2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        #myDiv67 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .kare {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3 class="text-center">Mouse Eventleri</h3>
+
+    <div class="container">
+        <div class="events-wrapper">
+            <div class="click box">
+                <STRong>
+                    <p>CLİCK</p>
+                </STRong>
+            </div>
+            <div class="dblclick box">
+                <STRong>
+                    <p>DBLCLİCK</p>
+                </STRong>
+            </div>
+            <div class="mouseenter box">
+                <STRong>
+                    <p>MOUSEENTER</p>
+                </STRong>
+            </div>
+            <div class="mouseleave box">
+                <STRong>
+                    <p>MOUSELEAVE</p>
+                </STRong>
+            </div>
+            <div class="mouseover box">
+                <STRong>
+                    <p>MOUSEOVER</p>
+                </STRong>
+            </div>
+            <div class="mouseout box">
+                <STRong>
+                    <p>MOUSEOUT</p>
+                </STRong>
+            </div>
+            <div class="mousedown box">
+                <STRong>
+                    <p>MOUSEDOWN</p>
+                </STRong>
+            </div>
+            <div class="mouseup box">
+                <STRong>
+                    <p>MOUSEUP</p>
+                </STRong>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // Mouse Events
+
+        // 1- click
+        $(".click").click(function () {  // Class'ı "click" olana tıklanıldığında
+            $(this).css("background-color", "red")  // arka plan rengini kırmızı yapar.
+        })
+
+        // 2- dblclick
+        $(".dblclick").dblclick(function () { // Class'ı "dblclick" olana çift tıklandığında
+            $(this).css("background-color", "red") // arka plan rengini kırmızı yapar.
+        })
+
+        // 3- mouseenter
+        $(".mouseenter").mouseenter(function () { // Class'ı "mouseenter" olanın üzerine fare gelindiğinde
+            $(this).css("background-color", "red") // arka plan rengini kırmızı yapar.
+        })
+
+        // 4- mouseleave
+        $(".mouseleave").mouseleave(function () { // Class'ı "mouseleave" olanın üzerinden fare çekildiğinde
+            $(this).css("background-color", "red") // arka plan rengini kırmızı yapar.
+        })
+
+        // 5- mouseover
+        $(".mouseover").mouseover(function () { // Class'ı "mouseover" olanın üzerine fare gelindiğinde
+            $(this).css("background-color", "red") // arka plan rengini kırmızı yapar.
+        });
+
+        // 6- mouseout
+        $(".mouseout").mouseout(function () { // Class'ı "mouseout" olanın üzerinden fare çekildiğinde
+            $(this).css("background-color", "red") // arka plan rengini kırmızı yapar.
+        });
+
+        // 7- mousedown
+        $(".mousedown").mousedown(function () { // Class'ı "mousedown" olanın üzerine fare tıklandığında
+            $(this).css("background-color", "red") // arka plan rengini kırmızı yapar.
+        });
+
+        // 8- mouseup
+        $(".mouseup").mouseup(function () { // Class'ı  "mouseup" olanın fare tıklaması bırakıldığında
+            $(this).css("background-color", "red") // arka plan rengini kırmızı yapar.
+        });
+    </script>
+</body>
+
+</html>

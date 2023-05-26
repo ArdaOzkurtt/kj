@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+    #outerDiv {
+        width: 300px;
+        height: 300px;
+        padding: 50px;
+        background: blue;
+    }
+
+    #innerDiv {
+        width: 200px;
+        height: 200px;
+        padding: 50px;
+        background: red;
+    }
+
+    #innerinner {
+        background: yellow;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+
+    <h3 class="text-center">Hedef sayacı</h3>
+
+    <div class="container">
+        <div class="counter">
+            <p>mouseover {outerDiv} = <span id="mouseOverOuter"></span></p>
+            <p>mouseover {innerDiv} = <span id="mouseOverInner"></span></p>
+            <p>mouseenter {outerDiv} = <span id="mouseEnterOuter"></span></p>
+            <p>mouseenter {innerDiv} = <span id="mouseEnterInner"></span></p>
+        </div>
+
+
+        <div id="outerDiv">
+            <div id="innerDiv">
+                <div id="innerinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // bir değişken tanımlanır ve başlangıç değeri olarak 0 verilir.
+        let outerMouseOver = 0,
+            outerMouseEnter = 0,
+            innerMouseOver = 0,
+            innerMouseEnter = 0;
+
+        // outerDiv öğesinin üzerine fare geldiğinde 
+        $("#outerDiv").mouseover(function () {
+            // değişkeni bir artırılır.
+            outerMouseOver++;
+            // "mouseOverOuter" id'sine içeriği "innerMouseEnter" olarak ayarlanır.
+            $("#mouseOverOuter").text(outerMouseOver);
+        });
+
+        // outerDiv öğesinin üzerine fare geldiğinde
+        $("#outerDiv").mouseenter(function () {
+            // değişkeni bir artırılır.
+            outerMouseEnter++;
+            // "mouseEnterOuter" id'sine içeriği "innerMouseEnter" olarak ayarlanır.
+            $("#mouseEnterOuter").text(outerMouseEnter);
+        });
+
+        // innerDiv öğesinin üzerine fare geldiğinde 
+        $("#innerDiv").mouseover(function () {
+            // değişkeni bir artırılır.
+            innerMouseOver++;
+            // "mouseOverInner" id'sine içeriği "innerMouseEnter" olarak ayarlanır.
+            $("#mouseOverInner").text(innerMouseOver);
+        });
+
+        // innerDiv öğesinin üzerine fare geldiğinde 
+        $("#innerDiv").mouseenter(function () {
+            // değişkeni bir artırılır.
+            innerMouseEnter++;
+            // "mouseEnterInner" id'sine içeriği "innerMouseEnter" olarak ayarlanır.
+            $("#mouseEnterInner").text(innerMouseEnter);
+        });
+    </script>
+</body>
+
+</html>
